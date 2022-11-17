@@ -1,3 +1,4 @@
+package DSA.String;
 import java.util.*;
 
 public class StringDemo2 {
