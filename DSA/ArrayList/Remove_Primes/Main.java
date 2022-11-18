@@ -18,8 +18,6 @@ public class Main {
       
     }
     
-    
-
 	public static void solution(ArrayList<Integer> al){
 	
 	   for(int i=al.size()-1 ; i>=0 ; i--){
