@@ -21,7 +21,7 @@ s_grade char references gradeT(g_name)    ----------->              foreign key 
 create table gradeT(
 g_id numeric ,
 g_name char,
-primary key(g_name)           ---------->               primary key                   <--------
+primary key(g_name)         
 );
 
 
@@ -29,7 +29,7 @@ create table student(
 s_id numeric,
 s_name varchar(30),
 s_grade char,
-foreign key (s_grade) references gradeT(g_name)    ----------->              foreign key               <--------------
+foreign key (s_grade) references gradeT(g_name)   on delete cascade   -- on delete cascade is used to delete tuple wise data also from referenced table(student).....
 );
 
 
