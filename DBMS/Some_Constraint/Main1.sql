@@ -48,7 +48,7 @@ select * from gradeT ;
 
 delete from student where s_name = 'Tinny';
 
-delete from gradeT where g_name = 'B';  --it htrough an error because it gives foreign key constraint because we delete primary key table in g_name
+delete from gradeT where g_name = 'B';  --it through an error because it gives foreign key constraint because we delete primary key table in g_name
 
 
 
