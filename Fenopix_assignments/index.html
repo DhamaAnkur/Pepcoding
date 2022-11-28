@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bubbles App</title>
+
+
+</head>
+<body>
+    
+    <h1>Bubbles App</h1>
+   <canvas id="mycanvas" width="1200" height="520" style="border: 2px solid black"></canvas>
+
+   <script>
+
+   // Making first circle --> Icircle
+    var Icircle = document.getElementById('mycanvas').getContext('2d');
+    Icircle.fillStyle = "red";
+    Icircle.arc(130 ,90 ,35 ,0 , 2*Math.PI);
+    Icircle.fill();
+
+     // Making second circle --> IIcircle
+    var IIcircle = document.getElementById('mycanvas').getContext('2d');
+    IIcircle.fillStyle = "blue";
+    IIcircle.arc(130 ,200 ,35 ,0 , 2*Math.PI);
+    IIcircle.fill();
+
+     // Making third circle --> IIIcircle
+    var IIIcircle = document.getElementById('mycanvas').getContext('2d');
+    IIIcircle.fillStyle = "green";
+    IIIcircle.arc(130 ,310 ,35 ,0 , 2*Math.PI);
+    IIIcircle.fill();
+
+     // Making fourth circle --> IVcircle
+    var IVcircle = document.getElementById('mycanvas').getContext('2d');
+    IVcircle.fillStyle = "red";
+    IVcircle.arc(130 ,420 ,35,0, 2*Math.PI);
+    IVcircle.fill();
+
+
+   </script>
+
+
+  <style>
+
+    canvas{
+        background-color: #ddd ;
+    }
+
+
+  </style>
+
+</body>
+</html>
