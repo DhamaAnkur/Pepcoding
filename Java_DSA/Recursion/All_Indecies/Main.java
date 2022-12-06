@@ -19,7 +19,7 @@ public class Main {
         int[] iarr = allIndices(arr, x, 0, 0);
 
         if(iarr.length == 0){
-            System.out.println();
+            System.out.println(); 
             return;
         }
 
@@ -30,16 +30,16 @@ public class Main {
 
     public static int[] allIndices(int[] arr, int x, int idx, int count) {
         if(idx==arr.length){
-        int[] newArr = new int[fsf];
+        int[] newArr = new int[count];
         return newArr ;
         }
         
         
         if(arr[idx]==x){
-        fsf++;
+        count++;
         }
         
-        int[]ans = allIndices(arr,x,idx+1,fsf);
+        int[]ans = allIndices(arr,x,idx+1,count);
          
          if(arr[idx]==x){
              ans[count-1] = idx;
