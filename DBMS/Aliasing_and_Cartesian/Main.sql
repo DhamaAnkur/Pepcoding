@@ -133,12 +133,10 @@ ALTER TABLE EMPLOYEE
 
 
 
----------------------------------------------------------------------------------------------------------------
--------------------------------------------------> Querry Start Here<----------------------------------------------
-
-
 select * from department ;
+
 select * from dept_locations ;
+
 
 select  dname , dlocation    --------- which column do you show
 from department , dept_locations  -------how to make cartesian product 
@@ -179,9 +177,23 @@ select e.address , e.bdate  from employee e where e.fname = 'John' ;
 select * from department ;
 select * from employee ;
 
-select e.fname , e.address 
-from employee e , department d 
-where e.dno = d.dnumber ;
 
+select e.fname , e.lname , e.address 
+from employee e , department d 
+where e.dno = d.dnumber and d.dname  = 'Research';
+
+
+
+
+------------------------------------------------------------------------------(3)Question
+--For every project located in "Standford" List the project number, the controlling department number and the department manager's last name, address and birth date.
+select * from department;
+select * from employee;
+select * from project;
+
+
+select p.pnumber , d.dnumber, e.lname, e.bdate, e.address
+from project p , department d  , employee e 
+where p.plocation  = 'Stafford' and p.dnum  =  d.dnumber  and d.mgr_ssn  = e.ssn;
 
 
