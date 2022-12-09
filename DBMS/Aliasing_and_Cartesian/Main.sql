@@ -128,3 +128,60 @@ ALTER TABLE EMPLOYEE
  ADD CONSTRAINT Emp_dno FOREIGN KEY  (Dno) REFERENCES DEPARTMENT(Dnumber);
 ALTER TABLE EMPLOYEE
  ADD CONSTRAINT Emp_super FOREIGN KEY  (Super_ssn) REFERENCES EMPLOYEE(Ssn);
+ 
+
+
+
+
+---------------------------------------------------------------------------------------------------------------
+-------------------------------------------------> Querry Start Here<----------------------------------------------
+
+
+select * from department ;
+select * from dept_locations ;
+
+select  dname , dlocation    --------- which column do you show
+from department , dept_locations  -------how to make cartesian product 
+where department.dnumber = dept_locations.dnumber  ;    ---------- remove errors tupple from the table 
+
+
+
+-----------alias (as) is used to change the name of column or table 
+
+select dname as departmentName , dlocation as departLocation     --- using of (as) 
+from department as d  , dept_locations as dl
+where d.dnumber  = dl.dnumber ;
+
+
+
+--------------------------------------------------------------------------(0) Question 
+-- How to find the super.ssn (Manager) of any ssn(Employee) 
+select * from employee ;
+
+select e.fname , e.lname ,e.ssn , e.super_ssn  from employee e ,employee s 
+where s.super_ssn = e.ssn ; 
+
+
+
+
+---------------------------------------------------------------------------(1) Question 
+
+-- Retrieve the address and birth date of all employee whose name is John B Smith ?
+select * from employee ;
+select e.address , e.bdate  from employee e where e.fname = 'John' ;
+
+
+
+
+---------------------------------------------------------------------------(2) Question 
+
+--Reterive the name and address from all the employee who's work on "Research Department".
+select * from department ;
+select * from employee ;
+
+select e.fname , e.address 
+from employee e , department d 
+where e.dno = d.dnumber ;
+
+
+
