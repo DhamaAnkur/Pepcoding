@@ -130,13 +130,11 @@ ALTER TABLE EMPLOYEE
  ADD CONSTRAINT Emp_super FOREIGN KEY  (Super_ssn) REFERENCES EMPLOYEE(Ssn);
  
 
-
-
+-------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------
 
 select * from department ;
-
 select * from dept_locations ;
-
 
 select  dname , dlocation    --------- which column do you show
 from department , dept_locations  -------how to make cartesian product 
@@ -196,4 +194,35 @@ select p.pnumber , d.dnumber, e.lname, e.bdate, e.address
 from project p , department d  , employee e 
 where p.plocation  = 'Stafford' and p.dnum  =  d.dnumber  and d.mgr_ssn  = e.ssn;
 
+
+------------------------------------------------------------------(4) Question --> For every employee retrieve the employee's first name and last name 
+-- and the first name and last anemof his/her immediate supervisor.
+
+select * from employee e ;
+
+
+select e.fname  ,e.lname  ,s.fname  ,s.lname  
+from employee e ,employee s 
+where e.super_ssn  = s.ssn ;
+
+
+-----------------------------------------------------------------------(5) retrieve the salary of every employee and all the distinct salary values.
+
+select * from employee e ;
+
+select distinct salary    ----- distinct keyword is used to remove the duplicates row/tupple
+from  employee e; 
+
+
+
+------------------------------------------------------------------------(6) Make a list of all project number for projects that involve an employee whose last
+-- name is "Smith" either as worker or as a manager of the department that controls the projects.
+
+select * from employee ; 
+select * from department ;
+select * from project ;
+
+select p.pnumber , e.fname 
+from employee e  , department d  , project p 
+where e.lname = 'Smith' and  d.mgr_ssn = e.ssn and p.dnum  = d.dnumber ;
 
