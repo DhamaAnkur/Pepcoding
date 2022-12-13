@@ -169,3 +169,49 @@ order by d.dname desc  , e.lname  , e.fname ;
 select * 
 from employee e 
 where e.super_ssn is null ;
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------- Nested Querry ------------------------------------------------------------------------------------
+
+------------------------------------------------------------------(4)Question --> Retrieve first name and last name from all the employee who is someone supervisor 
+
+select e.fname , e.lname 
+from employee e 
+where e.ssn in (select all s.super_ssn from employee s);   -------------- first solution of this question 
+
+
+select  distinct e.fname , e.lname  
+from employee e , employee s 
+where e.ssn  = s.super_ssn; -----------------Second solution of this question 
+
+
+--------------------------------------------------------------------(5)Question --> Retrieve the salary of all the employee whose salary is greate than the salary of 
+----------------------------------------------------------------------------------- all the employee in department no-5.
+select * from employee e ;
+select * from department d ;
+
+
+select e.fname , e.lname  ,e.salary 
+from employee e
+where e.salary > all (select e2.salary from employee e2 where e2.dno ='5');
+
+
+
+
+----------------------------------------------------------------------(6)Question --> Retrieve the name of each employee who has a dependant with the same first name 
+------------------------------------------------------------------------------------> and is the same sex as employee;
+
+select * from employee e ;
+select * from dependent d ;
+
+
+select e.fname , e.lname 
+from employee e  , dependent d  
+where e.ssn  = d.essn and e.sex  = d.sex  and e.fname  = d.dependent_name ;   -----------first Soltion 
+
+
+select e.fname , e.lname 
+from employee e   
+where e.ssn  in (select d.essn  from dependent d where e.sex  = d.sex and e.fname  = d.dependent_name) ;  ------------second soltution with nested querry

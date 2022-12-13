@@ -188,8 +188,6 @@ where extract(year from bdate) <1970;
 
 
 
-
-
 ---------------------------------------------------------------------------(5)Question --> Show resulting salary if every employee working ont hte "Product X"
 ----  project is given a raise of 50%. 
 
@@ -211,8 +209,6 @@ select * from department d ;
 select * 
 from employee e , department d 
 where d.dnumber  = 5 and salary >= 40000 and salary <= 50000 ;
-
-
 
 
 
