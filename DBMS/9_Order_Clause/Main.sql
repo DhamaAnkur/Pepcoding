@@ -163,13 +163,11 @@ where e.ssn = wo.essn  and p.pnumber  = wo.pno and d.dnumber  = p.dnum
 order by d.dname desc  , e.lname  , e.fname ;
 
 
-
 ----------------------------------------------------------------(3)Question --> Retrieve all the employee they have not supervisor 
 
 select * 
 from employee e 
 where e.super_ssn is null ;
-
 
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
