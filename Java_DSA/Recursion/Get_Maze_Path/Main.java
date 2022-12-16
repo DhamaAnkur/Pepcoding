@@ -22,7 +22,7 @@ public class Main {
       
     }
 
-
+     
     public static ArrayList<String> getMazePaths(int sr, int sc, int dr, int dc) {
         
         if(sr == dr && sc == dc){
