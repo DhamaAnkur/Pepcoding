@@ -9,7 +9,7 @@ public class Main {
          int ans  = rec(n  , memo);
          System.out.println(ans);
     }
-
+ 
     private static int rec(int n , int[]memo){
         if(n <= 1){
             return 1;
