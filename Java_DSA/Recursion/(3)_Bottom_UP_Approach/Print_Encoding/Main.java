@@ -42,7 +42,7 @@ public class Main {
         int num  = v1*10+v2;
         char word2 = (char)(num+'a'-1);
         
-        if(check <= 26){
+        if(num <= 26){
              printEncodings(str.substring(2) , asf+word2);
         }
     }

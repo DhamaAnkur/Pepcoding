@@ -34,11 +34,9 @@ import java.io.*;
 	            System.out.println(psf);
 	        }
 	        
-	        
 	        if(sc+1 <= dc){
 	            printMazePaths(sr, sc+1 ,  dr, dc, psf+"h");
 	        }
-	        
 	        
 	        if(sr+1 <= dr){
 	            printMazePaths(sr+1, sc, dr, dc,psf+"v");
