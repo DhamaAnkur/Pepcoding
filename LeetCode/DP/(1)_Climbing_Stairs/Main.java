@@ -5,24 +5,23 @@ public class Main {
 
     public static void main (String [] args ){ 
          int n = scn.nextInt();  
-         int []memo= new int[n+1];
-         int ans  = rec(n  , memo);
+         int []arr= new int[n+1];
+         int ans  = rec(n  , arr);
          System.out.println(ans);
     }
  
-    private static int rec(int n , int[]memo){
+    private static int rec(int n , int[]arr){
         if(n <= 1){
             return 1;
         }
 
-        if(memo[n] > 0){
-            return memo[n];
+        if(arr[n] > 0){
+            return arr[n];
         }
+           int opt1 = rec(n-1 , arr);
+           int opt2 = rec(n-2 , arr);
 
-           int opt1 = rec(n-1 , memo);
-           int opt2 = rec(n-2 , memo);
-
-           memo[n] = opt1 + opt2;
+           arr[n] = opt1 + opt2;
            
            return opt1 + opt2;
     }
