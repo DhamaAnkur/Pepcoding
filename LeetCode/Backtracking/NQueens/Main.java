@@ -1,6 +1,8 @@
 // Leetcode 51 M-Queens
 //Link of Question ( https://leetcode.com/problems/n-queens/description/ )
 
+import java.util.*;
+
 
 class Solution {
 
