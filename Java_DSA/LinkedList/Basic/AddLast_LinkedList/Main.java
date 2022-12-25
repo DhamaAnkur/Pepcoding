@@ -1,5 +1,5 @@
 
-//Add last in LinkedList
+//Add element at last in LinkedList
 //Link of Question ( https://www.pepcoding.com/resources/online-java-foundation/linked-lists/add-last-linked-list-official/ojquestion )
 
 import java.io.*;
@@ -62,3 +62,5 @@ public class Main {
     testList(list);
   }
 }
+
+
