@@ -33,7 +33,7 @@ public class Main {
 
     }
     public static void main(String [] args){
-    int []arr =  {4,6,8,10,12,14,16,18,20,22,24};
+    int []arr =  {4,6,8,10,10,12,14,16,18,20,22,24};
     int x = 10 ;
 
     int ans = binarySearch(arr ,x);
