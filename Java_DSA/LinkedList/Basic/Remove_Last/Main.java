@@ -1,7 +1,6 @@
 
-//Add the value at given idx
-//Question( https://www.pepcoding.com/resources/online-java-foundation/linked-lists/add-at-index-in-linked-list-official/ojquestion )
-
+//Remove Last In Linked List
+//Question ( https://www.pepcoding.com/resources/online-java-foundation/linked-lists/remove-last-in-linked-list/ojquestion )
 
 import java.io.*;
 import java.util.*;
@@ -103,32 +102,37 @@ public class Main {
     }
 
     public void addAt(int idx, int val){
-       if(idx == 0){
-        addFirst(val);
-    }
-    
-    else if(idx == size){
-        addLast(val);
-    }
-    
-    else if (idx < 0 || idx > size){
+      if(idx < 0 || idx > size){
         System.out.println("Invalid arguments");
-    }
-    
-    else {
-        Node n = new Node();
-        n.data = val ;
-        
-        Node temp = head ;
-        for(int i=0; i<idx-1 ; i++){
-            temp = temp.next;
+      } else if(idx == 0){
+        addFirst(val);
+      } else if(idx == size){
+        addLast(val);
+      } else {
+        Node node = new Node();
+        node.data = val;
+
+        Node temp = head;
+        for(int i = 0; i < idx - 1; i++){
+          temp = temp.next;
         }
-        
-        n.next = temp.next ;
-        temp.next = n;
+        node.next = temp.next;
+
+        temp.next = node;
         size++;
+      }
     }
-    
+
+    public void removeLast(){
+      Node temp =  head ;
+      
+      for(int i=0; i<size-2; i++){
+          temp = temp.next;
+      }
+      
+      temp.next = null ;
+      tail = temp ;
+      size--;
     }
   }
 
@@ -170,6 +174,8 @@ public class Main {
         int idx = Integer.parseInt(str.split(" ")[1]);
         int val = Integer.parseInt(str.split(" ")[2]);
         list.addAt(idx, val);
+      } else if (str.startsWith("removeLast")) {
+        list.removeLast();
       } 
       str = br.readLine();
     }
