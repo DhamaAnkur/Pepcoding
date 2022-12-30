@@ -152,8 +152,7 @@ public class Main {
          size--;
      }
      
-      int idx = size-1;
-      Node temp = getNodeAt(idx-1);
+      Node temp = getNodeAt(size-2);
       temp.next = null;
       tail =temp;
       size--;
