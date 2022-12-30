@@ -6,10 +6,8 @@ class Solution {
    if(num == 0){
        return 0;
    }
-
-   int last = num%10;
-   int first = num/10;
-   int ans =  last+first;
+        
+   int ans = (num%10) + (num/10);
     
     if(ans>9){
       int recAns =   addDigits(ans);
