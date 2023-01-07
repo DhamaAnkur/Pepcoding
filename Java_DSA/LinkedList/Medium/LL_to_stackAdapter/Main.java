@@ -1,4 +1,3 @@
-package Java_DSA.LinkedList.Medium.LL_to_stackAdapter;
 
 // Linked List To Stack Adapter
 // Link of Question ( https://www.pepcoding.com/resources/online-java-foundation/linked-lists/linkedlist-to-stack-adapter-official/ojquestion )
@@ -25,11 +24,27 @@ public class Main {
     }
 
     int pop() {
+          if(list.size() == 0){
+           System.out.println("Queue underflow");
+           return -1;
+        }
+        
+        else{
       return list.removeFirst();
+    }
+    
     }
 
     int top() {
+          if(list.size() == 0){
+           System.out.println("Queue underflow");
+           return -1;
+        }
+        
+        else{
       return list.getFirst();
+    }
+        
     }
   }
 
