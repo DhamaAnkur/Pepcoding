@@ -14,7 +14,7 @@ public class Main {
         int minCol = 0;
         int maxRow = n-1;
         int maxCol = m-1;
-        int count =0 ;
+        int count = 0;
         int total = n*m;
         
         while(count<total){
