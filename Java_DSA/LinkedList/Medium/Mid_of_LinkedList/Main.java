@@ -221,10 +221,15 @@ public class Main {
     
  
     public int mid(){
+        if(size == 0){
+            System.out.println("List is Empty");
+            return -1;
+        }
+        
     Node slow = head;
     Node fast = head;
     
-    while(fast.next.next != null && fast.next != null){
+    while(fast.next != null && fast.next.next != null){
         slow = slow.next;
         fast = fast.next.next;
     }
