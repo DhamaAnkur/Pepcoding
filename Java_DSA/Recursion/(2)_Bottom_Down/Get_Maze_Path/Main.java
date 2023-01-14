@@ -9,8 +9,11 @@ public class Main {
 
     public static void main(String[] args) throws Exception {
       Scanner scn = new Scanner(System.in);
-      int n =scn.nextInt();
-      int m =scn.nextInt();
+      // int n =scn.nextInt();
+      // int m =scn.nextInt();
+
+      int n =3;
+      int m =3;
       
       int sr = 0; // sr  - source row
       int sc = 0; // sc - source column

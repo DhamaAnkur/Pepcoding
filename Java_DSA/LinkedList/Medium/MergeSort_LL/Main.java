@@ -260,8 +260,6 @@ public class Main {
                  c2 = c2.next;
          }
           
-          
-          
           return LL;
            
         }

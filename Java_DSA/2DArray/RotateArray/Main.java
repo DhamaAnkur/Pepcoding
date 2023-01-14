@@ -15,7 +15,7 @@ public class Main {
             System.out.println();
         }
     }
-
+    
     public static void transpose(int[][] arr) {
         int n = arr.length;
 
