@@ -1,4 +1,4 @@
-// Jump game Leetcode--55
+// Leetcode - 55 Jump Game 
 // Link of Question( https://leetcode.com/problems/jump-game/description/ )
 
 class Solution {
