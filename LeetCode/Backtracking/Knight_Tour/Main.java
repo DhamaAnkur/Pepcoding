@@ -1,7 +1,7 @@
 
 // Leetcode 688 --> Knight Probability in chessboard
 
-
+import java.util.*;
 class Solution {
 
     public static int [][] dir = {{-2,1},{-1,2},{1,2},{2,1},{2,-1},{1,-2},{-1,-2},{-2,-1}};
