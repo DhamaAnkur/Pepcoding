@@ -74,10 +74,9 @@ public class Main {
 // }
 
 // // asf -> answer so far
-// public static void floodfill(int[][] maze, int sr, int sc, String
-// asf,boolean[][]vis) {
-// if(sr<0 || sc<0 || sr==maze.length || sc==maze[0].length || vis[sr][sc] ==
-// true || maze[sr][sc]==1){
+// public static void floodfill(int[][] maze, int sr, int sc, String asf,boolean[][]vis) {
+
+// if(sr<0 || sc<0 || sr==maze.length || sc==maze[0].length || vis[sr][sc] == true || maze[sr][sc]==1){
 // return ;
 // }
 
@@ -144,8 +143,7 @@ public class Main {
 
  
 /*---------------------------------------------------------------------------------------------------------- */
-// solution number - (4)
-
+// solution number - (4)   This is the best approach to solve this question  
 /*
  * import java.io.*;
  * import java.util.*;
@@ -193,6 +191,9 @@ public class Main {
  * }
  * 
  * maze[sr][sc] = 0 ;
+ * 
+ * 
+ * 
  * 
  * }
  * }
