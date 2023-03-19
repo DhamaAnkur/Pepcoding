@@ -56,9 +56,9 @@ public class Main {
 	}
 	public static void main(String[] args) {
 		Scanner scn = new Scanner(System.in);
-		String str = scn.next();
-        // String str = "ppeeepccccoodiiiiiinnngg";
-		System.out.println(compression1(str));
+		// String str = scn.next();
+        String str = "ppeeepccccoodiiiiiinnngg";
+		// System.out.println(compression1(str));
 		System.out.println(compression2(str));
 	}
 

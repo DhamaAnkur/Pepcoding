@@ -12,8 +12,8 @@ public class Main {
       // int n =scn.nextInt();
       // int m =scn.nextInt();
 
-      int n =3;
-      int m =3;
+      int n =scn.nextInt();
+      int m =scn.nextInt();
       
       int sr = 0; // sr  - source row
       int sc = 0; // sc - source column

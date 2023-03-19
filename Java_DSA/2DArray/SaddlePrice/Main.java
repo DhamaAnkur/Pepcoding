@@ -8,11 +8,9 @@ import java.util.*;
 public class Main {
 
     public static void saddlePrice(int[][] arr) {
-
         int n = arr.length;
 
         for (int i = 0; i < n; i++) {
-
             int svj = 0;
 
             for (int j = 1; j < n; j++) {

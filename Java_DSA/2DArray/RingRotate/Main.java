@@ -70,7 +70,7 @@ public class Main {
          k+= a.length;
      }
     int n = a.length;
-    reverse ( a  , 0 , n-k-1 );
+    reverse ( a  ,0 , n-k-1 );
     reverse ( a ,n-k , n-1 );
     reverse ( a , 0 , n-1 );
     
